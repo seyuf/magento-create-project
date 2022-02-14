@@ -31,8 +31,8 @@ else
   exit 1;
 fi
 
-git add .gitignore
-git commit -m 'added gitignore'
-git add ../magento
-git commit -m "add magento project"
-git push
+#git add .gitignore
+#git commit -m 'added gitignore'
+#git add ../magento
+#git commit -m "add magento project"
+#git push
