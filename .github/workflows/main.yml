@@ -6,6 +6,7 @@ on: [push]
 jobs:
   magento2-build:
     runs-on: ubuntu-latest
+    container: ubuntu
     name: 'm2 tests & build'      
     steps:
     - uses: actions/checkout@v2
@@ -14,4 +15,23 @@ jobs:
         git status
         git config --global user.name 'seyuf'
         git config --global user.email 'contac@madit.fr'
- 
+    - name: 'install fresh magento repo'
+      if: ${{true}}
+      uses: MAD-I-T/magento-actions@master
+      env:
+        COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
+      with:
+        process: 'create-project'
+        override_settings: 1
+    - uses: actions/checkout@v2
+    - name: 'commit generated magento2 project'
+      run: |
+        git status
+        git config --global user.name 'seyuf'
+        git config --global user.email 'contac@madit.fr'
+        git add magento/.gitignore
+        git commit -m 'add m2 gitgignore'
+        git add magento
+        git commit -m 'adding magento dir'
+        git push
+
