@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
 INPUT_MAGENTO_VERSION="2.3.1"
+set -e
 
 PROJECT_PATH="$(pwd)"
+mkdir magento
+cd magento
 
 echo "currently in $PROJECT_PATH"
 
 subVersion=${$INPUT_MAGENTO_VERSION:2:1}
 
-set -e
 
 if [ -n "$INPUT_MAGENTO_VERSION" ]
 then
