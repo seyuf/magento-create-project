@@ -9,7 +9,7 @@ cd magento
 
 echo "currently in $PROJECT_PATH"
 
-subVersion=${$INPUT_MAGENTO_VERSION:2:1}
+subVersion=${INPUT_MAGENTO_VERSION:2:1}
 
 
 if [ -n "$INPUT_MAGENTO_VERSION" ]
