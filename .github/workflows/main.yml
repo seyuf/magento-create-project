@@ -10,18 +10,16 @@ jobs:
     name: 'm2 tests & build'      
     steps:
     - uses: actions/checkout@v2
-    - name: 'launch magento2 build'
+    - name: 'install fresh magento repo'
       if: ${{true}}
       uses: MAD-I-T/magento-actions@master
       env:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
-        php: '7.4'
-        process: 'build'
-        elasticsearch: 1
+        process: 'create-project'
         override_settings: 1
 
-    - name: 'launch magento2 zero downtime deploy'
+    - name: 'commit generated magento2 project'
       run: |
         git config --global user.name 'seyuf'
         git config --global user.email 'contac@madit.fr'
