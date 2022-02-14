@@ -26,11 +26,9 @@ jobs:
     - name: 'commit generated magento2 project'
       run: |
         git status
-        git config --global user.name 'seyuf'
-        git config --global user.email 'contac@madit.fr'
-        git add magento/.gitignore
+        git add .gitignore
         git commit -m 'add m2 gitgignore'
-        git add magento
+        git add ../magento
         git commit -m 'adding magento dir'
         git push
 
