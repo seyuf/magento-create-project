@@ -31,6 +31,8 @@ else
   exit 1;
 fi
 
+ls -lath
+
 git add .gitignore
 git commit -m 'added gitignore'
 git add ../magento
