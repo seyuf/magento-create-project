@@ -16,6 +16,7 @@ if [ -n "$INPUT_MAGENTO_VERSION" ]
 then
   case "$subVersion" in
     3)
+        /usr/local/bin/composer self-update --1 &&
       update-alternatives --set php /usr/bin/php7.1 &&
       composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION}
       ;;
