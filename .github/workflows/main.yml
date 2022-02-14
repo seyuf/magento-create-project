@@ -1,7 +1,7 @@
 
 name: m2-actions-test
 
-on: [merge]
+on: [push]
 
 jobs:
   magento2-build:
