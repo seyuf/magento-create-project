@@ -9,6 +9,7 @@ jobs:
     container: ubuntu
     name: 'm2 tests & build'      
     steps:
+    - uses: actions/checkout@v2
     - name: 'install fresh magento repo'
       if: ${{true}}
       uses: MAD-I-T/magento-actions@master
