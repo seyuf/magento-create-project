@@ -9,7 +9,6 @@ jobs:
     container: ubuntu
     name: 'm2 tests & build'      
     steps:
-    - uses: actions/checkout@v2
     - name: 'install fresh magento repo'
       if: ${{true}}
       uses: MAD-I-T/magento-actions@master
@@ -18,7 +17,7 @@ jobs:
       with:
         process: 'create-project'
         override_settings: 1
-
+    - uses: actions/checkout@v2
     - name: 'commit generated magento2 project'
       run: |
         git config --global user.name 'seyuf'
