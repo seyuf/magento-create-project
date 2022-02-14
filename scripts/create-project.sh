@@ -4,8 +4,7 @@ INPUT_MAGENTO_VERSION="2.3.1"
 set -e
 
 PROJECT_PATH="$(pwd)"
-mkdir magento
-cd magento
+
 
 echo "currently in $PROJECT_PATH"
 
@@ -33,8 +32,10 @@ fi
 
 ls -lath
 
-git add .gitignore
+mv project-community-edition magento
+
+git add magento/.gitignore
 git commit -m 'added gitignore'
-git add ../magento
+git add magento
 git commit -m "add magento project"
 git push
