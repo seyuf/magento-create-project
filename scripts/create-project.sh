@@ -46,7 +46,7 @@ ls -lath
 
 
 
-if [ -n "$INPUT_NO_PUSH" ]
+if [ -z "$INPUT_NO_PUSH" ]
 then
   mv project-community-edition magento
   git config user.name github-actions
