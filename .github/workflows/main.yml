@@ -16,4 +16,4 @@ jobs:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
         process: 'create-project'
-        override_settings: 0
+        magento_version: 2.4.1
