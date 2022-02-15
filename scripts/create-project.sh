@@ -22,12 +22,15 @@ then
       ;;
     4)
       case "$minorVersion" in
-        @(4|5)
-           update-alternatives --set php /usr/bin/php8.1 &&
-           composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION} ;;
-        @(0|1|2|3)
-           update-alternatives --set php /usr/bin/php7.4 &&
-           composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION} ;;
+        4 | 5 )
+           update-alternatives --set php /usr/bin/php8.1
+           composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION} 
+           ;;
+        0 | 1 | 2| 3 )
+           update-alternatives --set php /usr/bin/php7.4 
+           composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION} 
+           ;;
+        *) echo "This version $INPUT_MAGENTO_VERSION of magento is not recognized" && exit 1 ;;
       esac
     *) echo "This version $INPUT_MAGENTO_VERSION of magento is not recognized" && exit 1 ;;
    esac
