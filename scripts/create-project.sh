@@ -26,7 +26,6 @@ then
            update-alternatives --set php /usr/bin/php8.1 &&
            composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION} ;;&
         0|1|2|3)
-           echo "Fri|Sat|Sun";;
            update-alternatives --set php /usr/bin/php7.4 &&
            composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION}
         *) ;;
