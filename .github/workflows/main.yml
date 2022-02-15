@@ -22,13 +22,3 @@ jobs:
       with:
         process: 'create-project'
         override_settings: 1
-    - uses: actions/checkout@v2
-    - name: 'commit generated magento2 project'
-      run: |
-        git status
-        git add .gitignore
-        git commit -m 'add m2 gitgignore'
-        git add ../magento
-        git commit -m 'adding magento dir'
-        git push
-
