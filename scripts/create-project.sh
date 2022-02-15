@@ -14,7 +14,7 @@ minorVersion=${INPUT_MAGENTO_VERSION:4:1}
 
 if [ -n "$INPUT_MAGENTO_VERSION" ]
 then
-  case "$subVersion" in
+  case "$majorVersion" in
     3)
         /usr/local/bin/composer self-update --1 &&
       update-alternatives --set php /usr/bin/php7.1 &&
@@ -32,7 +32,7 @@ then
            ;;
         *) echo "This version $INPUT_MAGENTO_VERSION of magento 2.4.X is not recognized minor $minorVersion" && exit 1 ;;
       esac ;;
-    *) echo "This version $INPUT_MAGENTO_VERSION of magento is not recognized" && exit 1 ;;
+    *) echo "This version $INPUT_MAGENTO_VERSION of magento is not recognized minor $minorVersion" && exit 1 ;;
    esac
 else
   echo "You must specify a magento version"
