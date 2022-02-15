@@ -48,7 +48,8 @@ ls -lath
 
 if [ -z "$INPUT_NO_PUSH" ]
 then
-  mv project-community-edition magento
+  mv ./project-community-edition ./magento
+  ls -lath ./magento
   git config user.name github-actions
   git config user.email github-actions@github.com
   git add magento/.gitignore
