@@ -3,7 +3,6 @@
 ## use command bin/magento deploy:mode:set to switch modes
 
 #   SetEnv MAGE_MODE developer
-
 ############################################
 ## uncomment these lines for CGI mode
 ## make sure to specify the correct cgi php binary file name
