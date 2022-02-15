@@ -9,11 +9,6 @@ jobs:
     name: 'm2 tests & build'      
     steps:
     - uses: actions/checkout@v2
-    - name: 'commit generated magento2 project'
-      run: |
-        git status
-        git config --global user.name 'seyuf'
-        git config --global user.email 'contac@madit.fr'
     - name: 'install fresh magento repo'
       if: ${{true}}
       uses: MAD-I-T/magento-actions@master
@@ -21,4 +16,4 @@ jobs:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
         process: 'create-project'
-        override_settings: 1
+        override_settings: 0
