@@ -31,7 +31,7 @@ then
            composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition=${INPUT_MAGENTO_VERSION} 
            ;;
         *) echo "This version $INPUT_MAGENTO_VERSION of magento is not recognized" && exit 1 ;;
-      esac
+      esac ;;
     *) echo "This version $INPUT_MAGENTO_VERSION of magento is not recognized" && exit 1 ;;
    esac
 else
