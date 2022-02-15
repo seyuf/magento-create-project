@@ -34,6 +34,8 @@ ls -lath
 
 mv project-community-edition magento
 
+git config user.name github-actions
+git config user.email github-actions@github.com
 git add magento/.gitignore
 git commit -m 'added gitignore'
 git add magento
