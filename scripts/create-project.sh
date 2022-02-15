@@ -60,6 +60,7 @@ then
   ls -lath ./magento
   git config user.name github-actions
   git config user.email github-actions@github.com
+  [ -f magento/.gitignore ] && echo "gitignore exist." || cp /opt/config/templates/gitignore.tpl magento/.gitignore
   git add magento/.gitignore
   git commit -m 'added gitignore'
   git add magento
