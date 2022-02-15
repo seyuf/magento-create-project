@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-INPUT_MAGENTO_VERSION="2.4.1"
+INPUT_MAGENTO_VERSION="2.3.7"
 
 set -e
 
