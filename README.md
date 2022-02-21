@@ -24,3 +24,6 @@ Because a habit to follow https://12factor.net composer credentials are set thro
   <a href="https://www.youtube.com/watch?v=cqI79AKN7Gk"><img src="https://user-images.githubusercontent.com/3765910/154555377-2ab4d165-9bbb-42a4-b6cf-22586156477d.png" alt="install magento 2 using github actions"></a>
   <span>Install process in video</scan>
 </div>
+
+
+Ask questions here https://forum.madit.fr/t/install-magento-using-github-actions/13
