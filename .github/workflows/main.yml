@@ -17,3 +17,5 @@ jobs:
       with:
         process: 'create-project'
         magento_version: 2.4.3
+        no_push: 1
+
