@@ -16,6 +16,6 @@ jobs:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
         process: 'create-project'
-        magento_version: 2.4.5-p1
+        magento_version: 2.4.2
 #       no_push: 1 //uncomment this to prevent src code from being pushed to repo
 
