@@ -17,5 +17,5 @@ jobs:
       with:
         process: 'create-project'
         magento_version: 2.4.5-p1
-#       no_push: 1 //uncomment this to prevent src code from being pushed to repo
+        no_push: 1 //uncomment this to prevent src code from being pushed to repo
 
