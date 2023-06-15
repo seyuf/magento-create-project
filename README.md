@@ -24,5 +24,6 @@ Because a habit to follow https://12factor.net composer credentials are set thro
   <span>Install process in video</scan>
 </div>
 
+One can use our **[magento-devbox](https://github.com/MAD-I-T/magento-devbox)** as local dev environment, linux and mac os supported.
 
 Ask questions here https://forum.madit.fr/t/install-magento-using-github-actions/13
