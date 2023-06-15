@@ -11,7 +11,7 @@ jobs:
     - uses: actions/checkout@v3
     - name: 'install fresh magento repo'
       if: ${{true}}
-      uses: MAD-I-T/magento-actions@v3.20
+      uses: MAD-I-T/magento-actions@v3.22
       env:
         COMPOSER_AUTH: ${{secrets.COMPOSER_AUTH}}
       with:
