@@ -2,6 +2,9 @@
 
 This is a magento installer using github action.
 Clone & push this repo and set appropriate the magento version in the [main.yml](https://github.com/seyuf/magento-create-project/blob/main/.github/workflows/main.yml) file. Or copy past the content of the file direclty in your repo.
+
+**This feature requires read & write permissions to the repository. This is set through settings > actions > general > workflows permissions**
+
 The [magento-actions](https://github.com/MAD-I-T/magento-actions) will populate your repo with magento source code.
 Don't forget to set the composer `COMPOSER_AUTH` in **settings > secrets > actions > Repository Secrets**.
 To regenerate the repo just delete the magento directory.
