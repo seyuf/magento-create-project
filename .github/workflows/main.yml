@@ -17,5 +17,5 @@ jobs:
       with:
         process: 'install-magento'
         magento_version: 2.4.7
-        #no_push: 1 //uncomment this to prevent src code from being pushed to repo
+        no_push: 1 //uncomment this to prevent src code from being pushed to repo
 
